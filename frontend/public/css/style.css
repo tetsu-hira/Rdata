@@ -116,45 +116,172 @@ button:hover {
   max-width: 1040px;
   margin: 0 auto 56px 80px;
 }
-.IndexContainer__header {
+.IndexContainer .IndexContent__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.IndexContainer__header .NavList {
+.IndexContainer .IndexContent__header .NavList {
   line-height: 24px;
   list-style: none;
   margin-left: 40px;
 }
-.IndexContainer__header .NavList__item {
+.IndexContainer .IndexContent__header .NavList__item {
   padding: 0;
   list-style: none;
   display: inline-block;
 }
-.IndexContainer__header .NavList__item a {
+.IndexContainer .IndexContent__header .NavList__item a {
   color: #6c7686;
   display: block;
   width: 100%;
   height: 100%;
   padding: 16px 32px;
+  font-size: 12px;
 }
-.IndexContainer__header .NavList__item a:hover {
+.IndexContainer .IndexContent__header .NavList__item a:hover {
   color: #ffffff;
   background-color: #b7cadc;
   transition: all 0.3s ease;
 }
-.IndexContainer__header .NavList__item a .Match {
+.IndexContainer .IndexContent__header .NavList__item .Match {
   width: 216px;
-  margin-right: 54px;
+  margin-right: 56px;
   text-align: center;
 }
-.IndexContainer__header .NavList__item a .Midway {
+.IndexContainer .IndexContent__header .NavList__item .Midway {
   width: 216px;
   text-align: center;
-  margin-right: 54px;
+  margin-right: 66px;
 }
-.IndexContainer__header .NavList__item a .Add {
+.IndexContainer .IndexContent__header .NavList__item .Add {
   width: 150px;
   text-align: right;
-  margin-left: 50px;
+  margin-left: 40px;
+}
+.IndexContainer .IndexTable__head {
+  display: flex;
+  background-color: #b7cadc;
+  border-radius: 2px 2px 0 0;
+  height: 50px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  font-size: 14px;
+}
+.IndexContainer .IndexTable__head .id {
+  width: 72px;
+  text-align: center;
+  margin: auto 0;
+}
+.IndexContainer .IndexTable__head .name {
+  margin: auto auto auto 0;
+}
+.IndexContainer .IndexTable__head .point {
+  width: 72px;
+  text-align: center;
+  overflow-wrap: normal;
+  margin: auto 0;
+}
+.IndexContainer .IndexTable__head .score {
+  width: 72px;
+  text-align: center;
+  margin: auto 0;
+}
+.IndexContainer .IndexTable__head .court {
+  width: 72px;
+  text-align: center;
+  margin: auto 56px auto 0;
+}
+.IndexContainer .IndexTable__head .sum {
+  width: 72px;
+  text-align: center;
+  overflow-wrap: normal;
+  margin: auto 0;
+}
+.IndexContainer .IndexTable__head .rank {
+  width: 56px;
+  text-align: center;
+  margin: auto 0;
+}
+.IndexContainer .IndexTable__body {
+  background-color: #ffffff;
+}
+.IndexContainer .IndexTable__body li {
+  height: 40px;
+  border: 1px solid #f0f4f9;
+  border-top: none;
+  display: flex;
+  align-items: center;
+}
+.IndexContainer .IndexTable__body li .ItemData {
+  display: flex;
+  width: 100%;
+}
+.IndexContainer .IndexTable__body li .ItemData .FlexLeft {
+  display: flex;
+  justify-content: flex-start;
+}
+.IndexContainer .IndexTable__body li .ItemData .FlexLeft .id {
+  font-size: 16px;
+  color: #bac6d3;
+  width: 72px;
+  text-align: center;
+  margin: auto;
+}
+.IndexContainer .IndexTable__body li .ItemData .FlexLeft .name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #8491a5;
+  margin: auto auto auto 0;
+  text-align: center;
+}
+.IndexContainer .IndexTable__body li .ItemData .FlexRight {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: auto;
+}
+.IndexContainer .IndexTable__body li .ItemData .FlexRight .court {
+  font-size: 14px;
+  font-weight: 500;
+  color: #8491a5;
+  width: 72px;
+  font-weight: 600;
+  margin: auto;
+  text-align: center;
+  height: 39px;
+  line-height: 40px;
+  background: #e8e9e9;
+}
+.IndexContainer .IndexTable__body li .ItemData .FlexRight .point {
+  font-size: 14px;
+  font-weight: 500;
+  width: 72px;
+  font-weight: 600;
+  height: 39px;
+  line-height: 40px;
+  background: #e8e9e9;
+  margin: auto;
+  text-align: center;
+}
+.IndexContainer .IndexTable__body li .ItemData .FlexRight .score {
+  font-size: 14px;
+  font-weight: 500;
+  color: #8491a5;
+  width: 72px;
+  font-weight: 600;
+  height: 39px;
+  line-height: 40px;
+  background: #e8e9e9;
+  margin: auto;
+  text-align: center;
+}
+.IndexContainer .IndexTable__body li .ItemData .FlexRight .edit {
+  font-size: 14px;
+  font-weight: 500;
+  color: #8491a5;
+  width: 56px;
+  margin-right: 0;
+  text-align: center;
+  margin: auto;
 }

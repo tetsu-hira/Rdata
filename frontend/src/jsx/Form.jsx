@@ -1,22 +1,39 @@
-import React from "react";
-import React  from react';
+import React, { useState } from 'react';
+import Axios from 'axios';
+import axios from 'axios';
 
-export const MessageForm React.FC = () => {
-  const [message, setMessage] = React.useState('');
+export default function Form() {
+  const [values, setValues] = useState({
+    name: ""
+  });
 
-  const hanleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setMessage(e.target.value);
-  };
+  const  handleInputChange = () => {
+    axios.post("/posts", {name: values})
+  }
+    
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    alert('次のメッセージが送信されました: ' + message);
-  };
+  // const handleSubmit = (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   alert('追加されました');
+  // };
 
-  return <form onSubmit={handleSubmit}>
-    <label>メッセージ：
-      <input type="text" value={message} onChange={handleChange} />
-    </label>
-    <input type="submit" value="送信" />
-  </form>;
-};
+
+  return (
+    <>
+      <form>
+        <div className="form-group">
+          <label htmlFor="name">Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            className="form form-control"
+            // onChange={handleInputChange}
+          />
+        </div>
+        <button type="submit" onClick={handleInputChange}>登録</button>
+      </form>
+    </>
+  );
+}
+

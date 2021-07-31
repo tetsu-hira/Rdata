@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Header from './Header.jsx';
 import axios from "axios";
-import Form from "./Add.jsx"
+import Form from "./Form.jsx"
 
 function App() {
   
@@ -9,7 +9,6 @@ function App() {
 
   useEffect(() => {
     console.log("副作用関数が実行されました");
-    console.log("fetch");
 
     const url = '/posts';
     axios.get(url)

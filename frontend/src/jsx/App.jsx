@@ -6,6 +6,17 @@ import Form from "./Form.jsx"
 function App() {
   
   const [team, setTeam] = useState([]);
+  const [vegeId, setVegeId] = useState();
+  // const [vegeColor, setVegeColor] = useState("");
+
+  const [vegeList, setVegeList] = useState([]);
+
+  const handleDelete = () => {
+    setVegeList([...vegeList, { id: vegeId }]);
+    axios.post(`http://localhost:4000/delete/:id`, {
+      id: vegeId
+    });
+  };
 
   useEffect(() => {
     console.log("副作用関数が実行されました");
@@ -69,7 +80,11 @@ function App() {
                       <div className="edit">編集</div>
                       <div className="point">{team.sum_point}</div>
                       <div className="score">{team.sum_score}</div>
-                      <div className="edit">削除</div>
+                      <form onSubmit={() => {
+                        handleDelete(team.id);
+                      }}>
+                        <button type="submit" className="edit" onClick={(e) => { setVegeId(e.target.value); }}>削除</button>
+                      </form>
                     </div>
                   </div>
                 </li>

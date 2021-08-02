@@ -1,39 +1,55 @@
-import React, { useState } from 'react';
-import Axios from 'axios';
-import axios from 'axios';
+import React from "react";
+import { useState } from "react";
+import Axios from "axios";
 
 export default function Form() {
-  const [values, setValues] = useState({
-    name: ""
-  });
+  const [vegeName, setVegeName] = useState("");
+  // const [vegeId, setVegeId] = useState("");
+  // const [vegeColor, setVegeColor] = useState("");
 
-  const  handleInputChange = () => {
-    axios.post("/posts", {name: values})
-  }
-    
+  const [vegeList, setVegeList] = useState([]);
 
-  // const handleSubmit = (e: React.FormEvent) => {
-  //   e.preventDefault();
-  //   alert('追加されました');
+  // const [newName, setNewName] = useState("");
+  // const [newColor, setNewColor] = useState("");
+
+  // useEffect(() => {
+  //   Axios.get("http://localhost:4000/get").then((response) => {
+  //     console.log(response.data);
+  //     setVegeList(response.data);
+  //   });
+  // }, []);
+
+  const handleRegist = () => {
+    setVegeList([...vegeList, { name: vegeName }]);
+  
+    Axios.post("http://localhost:4000/create", {
+      name: vegeName
+    });
+    console.log(vegeName);
+  };
+
+  // const handleDelete = (vegeId) => {
+  //   Axios.delete(`http://localhost:4000/delete/${vegeId}`);
   // };
 
+  // const handleUpdate = (vegeId) => {
+  //   Axios.put("http://localhost:4000/update", {
+  //     id: vegeId,
+  //     name: newName,
+  //     color: newColor,
+  //   });
+  //   setNewName("");
+  //   setNewColor("");
+  // };
 
   return (
-    <>
-      <form>
-        <div className="form-group">
-          <label htmlFor="name">Name</label>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            className="form form-control"
-            // onChange={handleInputChange}
-          />
-        </div>
-        <button type="submit" onClick={handleInputChange}>登録</button>
-      </form>
-    </>
-  );
+    <form onSubmit={handleRegist}>
+    <div className="form-group">
+      <label htmlFor="name">Team Name</label>
+      <input type="text" className="form form-control" name="name" id="name"
+      onChange={(e) => { setVegeName(e.target.value); }} />
+    </div>
+    <button type="submit">Enter</button>
+  </form>
+  )
 }
-

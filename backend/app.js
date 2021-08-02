@@ -2,6 +2,10 @@ const express = require('express');
 const mysql = require('mysql');
 const cors = require("cors");
 const app = express();
+const bodyParser = require("body-parser");
+
+app.use(bodyParser.json());
+
 // 選択されたチーム名を受け取る
 // const team1 = document.getElementById('select1').value;
 var mysql_host = "database-2.c2u3mwdflnch.us-east-2.rds.amazonaws.com";
@@ -34,11 +38,25 @@ app.get("/posts", function(req, res) {
 });
 app.post("/create", (req, res) => {
   connection.query(
-    "INSERT INTO team(name) VALUES (?)",
-    [req.body.itemName],
+    "INSERT INTO team (name) VALUES (?)",
+    [ req.body.name ],
     (error, results) => {
+      if (error) throw err;
+      res.send(results);
       // 一覧画面にリダイレクトする処理
-      res.redirect('http://localhost:3000/');
+      // res.redirect('http://localhost:3000');
+    }
+  );
+});
+app.post("/delete/:id", (req, res) => {
+  connection.query(
+    "DELETE FROM team WHERE id = ?",
+    [ req.params.id ],
+    (error, results) => {
+      if (error) throw err;
+      // res.send(results);
+      // 一覧画面にリダイレクトする処理
+      // res.redirect('http://localhost:3000');
     }
   );
 });
@@ -52,12 +70,16 @@ app.post("/create", (req, res) => {
 //   next();
 // });
 
-// const corsOptions = {
-//   origin: 'http://localhost:4000',
-//   optionsSuccessStatus: 200
-// };
+const corsOptions = {
+  origin: 'http://localhost:4000',
+  optionsSuccessStatus: 200
+};
 
-app.use(cors());
+app.use(cors({
+  origin: 'http://localhost:3000', //アクセス許可するオリジン
+  credentials: true, //レスポンスヘッダーにAccess-Control-Allow-Credentials追加
+  optionsSuccessStatus: 200 //レスポンスstatusを200に設定
+}));
 
 app.listen(4000, function() {
   console.log("port4000オッケー！！")

@@ -48,13 +48,14 @@ app.post("/create", (req, res) => {
     }
   );
 });
-app.post("/delete/:id", (req, res) => {
+app.post("/delete", (req, res) => {
+  const id = req.body.id;
   connection.query(
-    "DELETE FROM team WHERE id = ?",
-    [ req.params.id ],
+    `DELETE FROM team WHERE id = ?`,
+    [ id ],
     (error, results) => {
       if (error) throw err;
-      // res.send(results);
+      res.send(results);
       // 一覧画面にリダイレクトする処理
       // res.redirect('http://localhost:3000');
     }
@@ -81,6 +82,6 @@ app.use(cors({
   optionsSuccessStatus: 200 //レスポンスstatusを200に設定
 }));
 
-app.listen(4000, function() {
+app.listen(4000, () => {
   console.log("port4000オッケー！！")
 });

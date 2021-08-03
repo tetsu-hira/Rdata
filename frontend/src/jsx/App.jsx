@@ -6,15 +6,14 @@ import Form from "./Form.jsx"
 function App() {
   
   const [team, setTeam] = useState([]);
-  const [vegeId, setVegeId] = useState();
+  const [id, setId] = useState();
   // const [vegeColor, setVegeColor] = useState("");
 
-  const [vegeList, setVegeList] = useState([]);
+  // const [vegeList, setVegeList] = useState([]);
 
   const handleDelete = () => {
-    setVegeList([...vegeList, { id: vegeId }]);
-    axios.post(`http://localhost:4000/delete/:id`, {
-      id: vegeId
+    axios.post(`http://localhost:4000/delete`, {
+      id: id
     });
   };
 
@@ -80,10 +79,8 @@ function App() {
                       <div className="edit">編集</div>
                       <div className="point">{team.sum_point}</div>
                       <div className="score">{team.sum_score}</div>
-                      <form onSubmit={() => {
-                        handleDelete(team.id);
-                      }}>
-                        <button type="submit" className="edit" onClick={(e) => { setVegeId(e.target.value); }}>削除</button>
+                      <form onSubmit={handleDelete}>
+                        <button type="submit" className="edit" onClick={() => setId(team.id) }>削除</button>
                       </form>
                     </div>
                   </div>

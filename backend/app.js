@@ -38,8 +38,8 @@ app.get("/posts", function(req, res) {
 });
 app.post("/create", (req, res) => {
   connection.query(
-    "INSERT INTO team (name) VALUES (?)",
-    [ req.body.name ],
+    "INSERT INTO team (id, name) VALUES (?, ?)",
+    [ req.body.id, req.body.name ],
     (error, results) => {
       if (error) throw err;
       res.send(results);

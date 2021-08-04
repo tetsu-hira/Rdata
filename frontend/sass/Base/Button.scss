@@ -1,17 +1,17 @@
 button {
-background: #80bcff;
-  border-radius: 30px;
+background: #b7cadc;
+  // border-radius: 30px;
   font-size: 12px;
   width: 80px;
   height: 40px;
   line-height: 20px;
   text-align: center;
-  color: #ffffff;
-  border: 1px solid #80bcff;
-  margin: 5px;
+  color: #fff;
+  border: 1px solid #b7cadc;
+  margin: 8px 0;
   &:hover {
     background-color: #ffffff;
-    color: #80bcff;
+    color: #b7cadc;
     transition: all 0.3s ease;
   }
 }

@@ -80,7 +80,7 @@ function App() {
                       <div className="point">{team.sum_point}</div>
                       <div className="score">{team.sum_score}</div>
                       <form onSubmit={handleDelete}>
-                        <button type="submit" className="edit" onClick={() => setId(team.id) }>削除</button>
+                        <input type="submit" className="edit" onClick={() => setId(team.id) } value="削除"></input>
                       </form>
                     </div>
                   </div>

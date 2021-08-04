@@ -1,0 +1,25 @@
+.Form {
+  display: flex;
+  &Content {
+    display: flex;
+    // background-color: #fff;
+    &__id {
+      height: 40px;
+      border: 1px solid #b7cadc;
+      // border-top: none;
+      display: flex;
+      align-items: center;
+      width: 56px;
+      margin: auto 0;
+    }
+    &__name {
+      height: 40px;
+      border: 1px solid #b7cadc;
+      // border-top: none;
+      display: flex;
+      align-items: center;
+      margin: auto 8px;
+      width: 192px;
+    }
+  }
+}

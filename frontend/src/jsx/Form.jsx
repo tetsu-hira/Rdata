@@ -3,8 +3,8 @@ import { useState } from "react";
 import Axios from "axios";
 
 export default function Form() {
-  const [vegeName, setVegeName] = useState("");
-  // const [vegeId, setVegeId] = useState("");
+  const [teamName, setTeamName] = useState("");
+  const [teamId, setTeamId] = useState("");
   // const [vegeColor, setVegeColor] = useState("");
 
   const [vegeList, setVegeList] = useState([]);
@@ -20,21 +20,22 @@ export default function Form() {
   // }, []);
 
   const handleRegist = () => {
-    setVegeList([...vegeList, { name: vegeName }]);
+    setVegeList([...vegeList, { id: teamId, name: teamName }]);
   
     Axios.post("http://localhost:4000/create", {
-      name: vegeName
+      id: teamId,
+      name: teamName
     });
-    console.log(vegeName);
+    console.log(teamName);
   };
 
-  // const handleDelete = (vegeId) => {
-  //   Axios.delete(`http://localhost:4000/delete/${vegeId}`);
+  // const handleDelete = (teamId) => {
+  //   Axios.delete(`http://localhost:4000/delete/${teamId}`);
   // };
 
-  // const handleUpdate = (vegeId) => {
+  // const handleUpdate = (teamId) => {
   //   Axios.put("http://localhost:4000/update", {
-  //     id: vegeId,
+  //     id: teamId,
   //     name: newName,
   //     color: newColor,
   //   });
@@ -43,13 +44,16 @@ export default function Form() {
   // };
 
   return (
-    <form onSubmit={handleRegist}>
-    <div className="form-group">
-      <label htmlFor="name">Team Name</label>
-      <input type="text" className="form form-control" name="name" id="name"
-      onChange={(e) => { setVegeName(e.target.value); }} />
-    </div>
-    <button type="submit">Enter</button>
-  </form>
+    <form onSubmit={handleRegist} className="Form">
+      <div className="FormContent">
+        <label htmlFor="id"></label>
+        <input type="text" className="FormContent__id" name="id" id="id"
+        onChange={(e) => { setTeamId(e.target.value); }} />
+        <label htmlFor="name"></label>
+        <input type="text" className="FormContent__name" name="name" id="name"
+        onChange={(e) => { setTeamName(e.target.value); }} />
+      </div>
+      <button type="submit">新規登録</button>
+    </form>
   )
 }

@@ -50,19 +50,20 @@ input {
 }
 
 button {
-  background: #b7cadc;
+  background: #dcc9b7;
   font-size: 12px;
   width: 80px;
   height: 40px;
   line-height: 20px;
   text-align: center;
   color: #fff;
-  border: 1px solid #b7cadc;
+  border: 1px solid #dcc9b7;
   margin: 8px 0;
+  box-shadow: 3px 2px 8px 0 rgba(0, 0, 0, 0.2);
 }
 button:hover {
   background-color: #ffffff;
-  color: #b7cadc;
+  color: #dcc9b7;
   transition: all 0.3s ease;
 }
 
@@ -273,7 +274,7 @@ button:hover {
   text-align: center;
   height: 39px;
   line-height: 40px;
-  background: #e8e9e9;
+  background: #e2f1f1;
 }
 .IndexContainer .IndexTable__body li .ItemData .FlexRight .point {
   font-size: 14px;
@@ -282,7 +283,7 @@ button:hover {
   font-weight: 600;
   height: 39px;
   line-height: 40px;
-  background: #e8e9e9;
+  background: #e2f1f1;
   margin: auto;
   text-align: center;
 }
@@ -294,7 +295,7 @@ button:hover {
   font-weight: 600;
   height: 39px;
   line-height: 40px;
-  background: #e8e9e9;
+  background: #e2f1f1;
   margin: auto;
   text-align: center;
 }

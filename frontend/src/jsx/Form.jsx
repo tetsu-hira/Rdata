@@ -53,7 +53,7 @@ export default function Form() {
         <input type="text" className="FormContent__name" name="name" id="name"
         onChange={(e) => { setTeamName(e.target.value); }} />
       </div>
-      <button type="submit">新規登録</button>
+      <button type="submit">＋ 新規登録 </button>
     </form>
   )
 }

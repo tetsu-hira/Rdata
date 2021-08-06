@@ -24,7 +24,7 @@ ul, li {
 a {
   display: block;
   text-decoration: none;
-  color: #2d3133;
+  color: #6c7686;
   font-size: 14px;
 }
 a:hover {
@@ -127,7 +127,7 @@ button:hover {
   display: flex;
   align-items: center;
   margin: auto 8px;
-  width: 192px;
+  width: 222px;
 }
 
 .Index {
@@ -135,8 +135,7 @@ button:hover {
 }
 .IndexContainer {
   width: 90%;
-  min-width: 600px;
-  max-width: 1040px;
+  width: 1040px;
   margin: 0 auto 56px 80px;
 }
 .IndexContainer .IndexContent__header {
@@ -185,12 +184,13 @@ button:hover {
 .IndexContainer .IndexTable__head {
   display: flex;
   background-color: #b7cadc;
-  border-radius: 2px 2px 0 0;
+  border-radius: 10px 10px 0 0;
   height: 50px;
   font-size: 16px;
   line-height: 24px;
   color: #ffffff;
   font-size: 14px;
+  border-bottom: 4px solid #f6faff;
 }
 .IndexContainer .IndexTable__head .id {
   width: 72px;
@@ -232,7 +232,7 @@ button:hover {
 }
 .IndexContainer .IndexTable__body li {
   height: 40px;
-  border: 1px solid #f0f4f9;
+  border-bottom: 4px solid #f6faff;
   border-top: none;
   display: flex;
   align-items: center;
@@ -247,7 +247,7 @@ button:hover {
 }
 .IndexContainer .IndexTable__body li .ItemData .FlexLeft .id {
   font-size: 16px;
-  color: #bac6d3;
+  color: #6c7686;
   width: 72px;
   text-align: center;
   margin: auto;
@@ -255,7 +255,7 @@ button:hover {
 .IndexContainer .IndexTable__body li .ItemData .FlexLeft .name {
   font-size: 14px;
   font-weight: 500;
-  color: #8491a5;
+  color: #6c7686;
   margin: auto auto auto 0;
   text-align: center;
 }
@@ -272,7 +272,7 @@ button:hover {
   font-weight: 600;
   margin: auto;
   text-align: center;
-  height: 39px;
+  height: 36px;
   line-height: 40px;
   background: #e2f1f1;
 }
@@ -281,7 +281,7 @@ button:hover {
   font-weight: 500;
   width: 72px;
   font-weight: 600;
-  height: 39px;
+  height: 36px;
   line-height: 40px;
   background: #e2f1f1;
   margin: auto;
@@ -293,7 +293,7 @@ button:hover {
   color: #8491a5;
   width: 72px;
   font-weight: 600;
-  height: 39px;
+  height: 36px;
   line-height: 40px;
   background: #e2f1f1;
   margin: auto;

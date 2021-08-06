@@ -13,10 +13,10 @@
     color: #fff;
     display: inline-block;
     border: 1px solid #b7cadc;
-    background-color: #b7cadc;
+    background-color: $PrimaryColor;
     padding: 0 8px;
     &:hover {
-      color: #b7cadc;
+      color: $PrimaryColor;
       background-color: #ffffff;
     }
   }

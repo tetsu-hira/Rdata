@@ -7,9 +7,17 @@ function App() {
   
   const [team, setTeam] = useState([]);
   const [id, setId] = useState();
-  // const [vegeColor, setVegeColor] = useState("");
+  const [court, setCourt] = useState([]);
 
-  // const [vegeList, setVegeList] = useState([]);
+  useEffect(() => {
+    console.log("コート番号");
+   
+    axios.get('/court')
+      .then((res) => {
+        setCourt(res.data);
+      })
+  },[])
+
 
   const handleDelete = () => {
     axios.post(`http://localhost:4000/delete`, {
@@ -71,7 +79,11 @@ function App() {
                     <div className="FlexRight">
                       <div className="point">{team.pre_point}</div>
                       <div className="score">{team.pre_score}</div>
-                      <div className="court">{team.court}-{team.number}</div>
+                      <select className="court">
+                        {court.map(court=>(
+                          <option MenuItem={court.court}>{court.court}</option>
+                        ))}
+                      </select>
                       <div className="edit">編集</div>
                       <div className="point">{team.mid_point}</div>
                       <div className="score">{team.mid_score}</div>

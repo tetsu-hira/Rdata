@@ -1,24 +1,19 @@
 const gulp = require('gulp');
-const sass = require('gulp-sass')(require('sass'));
+var sass = require('gulp-sass')(require('sass'));
 const sassGlob = require('gulp-sass-glob');
 // const browserSync = require('browser-sync').create();
 
-gulp.task('sass', function(done) {
-  // stream
-  gulp.src('./sass/style.scss') //タスクで処理するソースの指定
+gulp.task('sass', function() {
+  return gulp.src('sass/style.scss') //タスクで処理するソースの指定
     .pipe(sassGlob()) // Sassの@importにおけるglobを有効にする
-    .pipe(sass()) //処理させるモジュールを指定
+    .pipe(sass().on('error', sass.logError)) //処理させるモジュールを指定
     .pipe(gulp.dest('./public/css/')); //保存先を指定
-
-  console.log('sass compiletしました！');
-  done();
 });
 
-gulp.task('watch', function(done) {
+gulp.task('watch', function() {
   gulp.watch('./sass/**/*.scss', gulp.task('sass'));
   //watch task
   console.log('watch startしました！');
-  done();
 });
 
 // gulp.task('browserSync', function() {

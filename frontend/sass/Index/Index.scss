@@ -2,8 +2,7 @@
   display: block;
   &Container {
     width: 90%;
-    min-width: 600px;
-    max-width: 1040px;
+    width: 1040px;
     margin: 0 auto 56px 80px;
     .IndexContent {
       &__header {
@@ -54,12 +53,13 @@
       &__head {
         display: flex;
         background-color: $PrimaryColor;
-        border-radius: 2px 2px 0 0;
+        border-radius: 10px 10px 0 0;
         height: 50px;
         font-size: 16px;
         line-height: 24px;
         color: #ffffff;
         font-size: 14px;
+        border-bottom: 4px solid #f6faff;
         .id {
           width: 72px;
           text-align: center;
@@ -100,7 +100,7 @@
         background-color: #ffffff;
         li {
           height: 40px;
-          border: 1px solid #f0f4f9;
+          border-bottom: 4px solid #f6faff;
           border-top: none;
           display: flex;
           align-items: center;
@@ -138,18 +138,18 @@
                 font-weight: 600;
                 margin: auto;
                 text-align: center;
-                height: 39px;
+                height: 36px;
                 line-height: 40px;
-                background: $PrimaryColor;
+                background: $SubColor;
               }
               .point {
                 font-size: 14px;
                 font-weight: 500;
                 width: 72px;
                 font-weight: 600;
-                height: 39px;
+                height: 36px;
                 line-height: 40px;
-                background: $PrimaryColor;
+                background: $SubColor;
                 margin: auto;
                 text-align: center;
               }
@@ -159,9 +159,9 @@
                 color: #8491a5;
                 width: 72px;
                 font-weight: 600;
-                height: 39px;
+                height: 36px;
                 line-height: 40px;
-                background: $PrimaryColor;
+                background: $SubColor;
                 margin: auto;
                 text-align: center;
               }

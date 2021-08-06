@@ -11,8 +11,8 @@ html {
 
 body {
   margin: 0;
-  background-color: $PrimaryColor;
-  color: $FontColor;
+  background-color: #f6faff;
+  color: #6c7686;
 }
 
 ul, li {
@@ -24,7 +24,7 @@ ul, li {
 a {
   display: block;
   text-decoration: none;
-  color: $FontColor;
+  color: #6c7686;
   font-size: 14px;
   &:hover {
     transition: all 0.3s ease;

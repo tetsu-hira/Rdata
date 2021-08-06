@@ -36,6 +36,16 @@ app.get("/posts", function(req, res) {
     res.send(results);
   });
 });
+app.get("/court", function(req, res) {
+  connection.query("select * from court", function(
+    error,
+    results,
+    fields
+  ) {
+    if (error) throw error;
+    res.send(results);
+  });
+});
 app.post("/create", (req, res) => {
   connection.query(
     "INSERT INTO team (id, name) VALUES (?, ?)",

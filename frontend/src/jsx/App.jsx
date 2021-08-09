@@ -8,13 +8,22 @@ function App() {
   const [team, setTeam] = useState([]);
   const [id, setId] = useState();
   const [court, setCourt] = useState([]);
+  const [number, setNumber] = useState([]);
 
   useEffect(() => {
-    console.log("コート番号");
+    console.log("コート");
    
     axios.get('/court')
       .then((res) => {
         setCourt(res.data);
+      })
+  },[])
+  useEffect(() => {
+    console.log("番号");
+   
+    axios.get('/number')
+      .then((res) => {
+        setNumber(res.data);
       })
   },[])
 
@@ -81,13 +90,27 @@ function App() {
                       <div className="score">{team.pre_score}</div>
                       <select className="court">
                         {court.map(court=>(
-                          <option MenuItem={court.court}>{court.court}</option>
+                          <option menuitem={court.court} key={court.id}>{court.court}</option>
+                        ))}
+                      </select>
+                      <select className="number">
+                        {number.map(number=>(
+                          <option menuitem={number.number} key={number.id}>{number.number}</option>
                         ))}
                       </select>
                       <div className="edit">編集</div>
                       <div className="point">{team.mid_point}</div>
                       <div className="score">{team.mid_score}</div>
-                      <div className="court">{team.mid_court}-{team.mid_number}</div>
+                      <select className="court">
+                        {court.map(court=>(
+                          <option menuitem={court.court} key={court.id}>{court.court}</option>
+                        ))}
+                      </select>
+                      <select className="number">
+                        {number.map(number=>(
+                          <option menuitem={number.number} key={number.id}>{number.number}</option>
+                        ))}
+                      </select>
                       <div className="edit">編集</div>
                       <div className="point">{team.sum_point}</div>
                       <div className="score">{team.sum_score}</div>

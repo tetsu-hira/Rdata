@@ -1,7 +1,7 @@
 .Header {
   height: 56px;
-  background-color: #ffffff;
-  border-bottom: 1px solid #f0f4f9;
+  background-color: $PrimaryColor;
+  // border-bottom: 1px solid #f0f4f9;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -12,11 +12,11 @@
     line-height: 56px;
     color: #fff;
     display: inline-block;
-    border: 1px solid #b7cadc;
+    // border: 1px solid #b7cadc;
     background-color: $PrimaryColor;
     padding: 0 8px;
     &:hover {
-      color: $PrimaryColor;
+      color: $FontColor;
       background-color: #ffffff;
     }
   }
@@ -27,10 +27,10 @@
   font-weight: 600;
   font-size: 16px;
   line-height: 56px;
-  color: #fff;
+  color: $FontColor;
   display: inline-block;
   border: 1px solid #b7cadc;
-  background-color: #b7cadc;
+  background-color: #FFF;
   padding: 0 8px;
   &:hover {
     color: #b7cadc;

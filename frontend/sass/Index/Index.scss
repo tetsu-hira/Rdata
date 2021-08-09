@@ -4,6 +4,7 @@
     width: 90%;
     width: 1040px;
     margin: 0 auto 56px 80px;
+    padding-top: 8px;
     .IndexContent {
       &__header {
         display: flex;
@@ -59,7 +60,7 @@
         line-height: 24px;
         color: #ffffff;
         font-size: 14px;
-        border-bottom: 4px solid #f6faff;
+        border-bottom: 4px solid $BackColor;
         .id {
           width: 72px;
           text-align: center;
@@ -100,7 +101,7 @@
         background-color: #ffffff;
         li {
           height: 40px;
-          border-bottom: 4px solid #f6faff;
+          border-bottom: 4px solid $BackColor;
           border-top: none;
           display: flex;
           align-items: center;
@@ -130,17 +131,41 @@
               display: flex;
               justify-content: flex-end;
               margin-left: auto;
-              .court {
-                font-size: 14px;
-                font-weight: 500;
-                color: #8491a5;
-                width: 72px;
-                font-weight: 600;
-                margin: auto;
-                text-align: center;
-                height: 36px;
-                line-height: 40px;
-                background: $SubColor;
+              select {
+                cursor: pointer;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                padding: 0 12px;
+                margin-left: 1px;
+                // border: none;
+                text-align-last:right;
+                outline: none;
+                // appearance: none;
+                .court {
+                  font-size: 14px;
+                  font-weight: 500;
+                  color: $FontColor;
+                  width: 36px;
+                  font-weight: 600;
+                  margin: auto;
+                  text-align: center;
+                  height: 36px;
+                  line-height: 40px;
+                  background: $ChangeColor;
+                }
+                .number {
+                  font-size: 14px;
+                  font-weight: 500;
+                  color: $FontColor;
+                  width: 36px;
+                  font-weight: 600;
+                  margin: auto;
+                  text-align: center;
+                  height: 36px;
+                  line-height: 40px;
+                  background: $ChangeColor;
+                }
               }
               .point {
                 font-size: 14px;
@@ -149,26 +174,26 @@
                 font-weight: 600;
                 height: 36px;
                 line-height: 40px;
-                background: $SubColor;
+                background: $ChangeColor;
                 margin: auto;
                 text-align: center;
               }
               .score {
                 font-size: 14px;
                 font-weight: 500;
-                color: #8491a5;
+                color: $FontColor;
                 width: 72px;
                 font-weight: 600;
                 height: 36px;
                 line-height: 40px;
-                background: $SubColor;
+                background: $ChangeColor;
                 margin: auto;
                 text-align: center;
               }
               .edit {
                 font-size: 14px;
                 font-weight: 500;
-                color: #8491a5;
+                color: $FontColor;
                 width: 56px;
                 margin-right: 0;
                 text-align: center;

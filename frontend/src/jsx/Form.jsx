@@ -22,7 +22,7 @@ export default function Form() {
   const handleRegist = () => {
     setVegeList([...vegeList, { id: teamId, name: teamName }]);
   
-    Axios.post("http://localhost:4000/create", {
+    Axios.post("/create", {
       id: teamId,
       name: teamName
     });

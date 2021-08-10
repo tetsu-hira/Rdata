@@ -9,6 +9,10 @@ function App() {
   const [id, setId] = useState();
   const [court, setCourt] = useState([]);
   const [number, setNumber] = useState([]);
+  const [changeCourt, setChangeCourt] = useState("");
+  const [changeNumber, setChangeNumber] = useState();
+  const [teamList, setTeamList] = useState([]);
+  const [teamId, setTeamId] = useState();
 
   useEffect(() => {
     console.log("コート");
@@ -29,10 +33,29 @@ function App() {
 
 
   const handleDelete = () => {
-    axios.post(`http://localhost:4000/delete`, {
+    axios.post('http://localhost:4000/delete', {
       id: id
     });
   };
+
+  const handleChangeCourt = () => {
+    setTeamList([...teamList, {id: teamId, court: changeCourt}]);
+
+    axios.post('/changecourt', {
+      id: teamId,
+      court: changeCourt
+    });
+  };
+  const handleChangeNumber = () => {
+    setTeamList([...teamList, {id: teamId, number: changeNumber}]);
+
+    axios.post('/changenumber', {
+      id: teamId,
+      number: changeNumber,
+    });
+  };
+
+  
 
   useEffect(() => {
     console.log("副作用関数が実行されました");
@@ -53,13 +76,10 @@ function App() {
             <h1>ResultSheet</h1>
             <ul className="Navlist">
               <li className="NavList__item">
-                <a href="/" className="Match">予選リーグ⤴</a>
+                <a href="/" className="Match">予選リーグ結果入力</a>
               </li>
               <li className="NavList__item">
-                <a href="/" className="Midway">中間リーグ⤴</a>
-              </li>
-              <li className="NavList__item">
-                <a href="/" className="Add">+ チーム追加</a>
+                <a href="/" className="Midway">中間リーグ結果入力</a>
               </li>
             </ul>
           </div>
@@ -88,28 +108,32 @@ function App() {
                     <div className="FlexRight">
                       <div className="point">{team.pre_point}</div>
                       <div className="score">{team.pre_score}</div>
-                      <select className="court">
+                      <select className="court" defaultValue={team.court} name="itemCourt" onChange={handleChangeCourt}>
                         {court.map(court=>(
-                          <option menuitem={court.court} key={court.id}>{court.court}</option>
+                          <option menuitem={court.court} key={court.id} name={court.id} onChange={() => setTeamId(team.id)}>{court.court}</option>
                         ))}
+                        <option hidden={team.court}>{team.court}</option>
                       </select>
-                      <select className="number">
+                      <select className="number" defaultValue={team.number} onChange={handleChangeNumber}>
                         {number.map(number=>(
-                          <option menuitem={number.number} key={number.id}>{number.number}</option>
+                          <option menuitem={number.number} key={number.id} onChange={(e) => { setTeamId(team.id); setChangeNumber(e.target.value); }}>{number.number}</option>
                         ))}
+                        <option hidden={team.number}>{team.number}</option>
                       </select>
                       <div className="edit">編集</div>
                       <div className="point">{team.mid_point}</div>
                       <div className="score">{team.mid_score}</div>
-                      <select className="court">
+                      <select className="court" defaultValue={team.mid_court}>
                         {court.map(court=>(
-                          <option menuitem={court.court} key={court.id}>{court.court}</option>
-                        ))}
+                          <option menuitem={court.court} key={court.id} value={court.court}>{court.court}</option>
+                          ))}
+                          <option hidden={team.mid_court}>{team.mid_court}</option>
                       </select>
-                      <select className="number">
+                      <select className="number" defaultValue={team.mid_number}>
                         {number.map(number=>(
                           <option menuitem={number.number} key={number.id}>{number.number}</option>
                         ))}
+                        <option hidden={team.mid_number}>{team.mid_number}</option>
                       </select>
                       <div className="edit">編集</div>
                       <div className="point">{team.sum_point}</div>

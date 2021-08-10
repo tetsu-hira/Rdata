@@ -153,27 +153,31 @@ button:hover {
   display: inline-block;
 }
 .IndexContainer .IndexContent__header .NavList__item a {
-  color: #6c7686;
-  display: block;
-  width: 100%;
-  height: 100%;
-  padding: 16px 32px;
+  background: #dcc9b7;
   font-size: 12px;
+  width: 80px;
+  height: 40px;
+  line-height: 39px;
+  text-align: center;
+  color: #fff;
+  border: 1px solid #dcc9b7;
+  margin: 8px 0;
+  box-shadow: 3px 2px 8px 0 rgba(0, 0, 0, 0.2);
 }
 .IndexContainer .IndexContent__header .NavList__item a:hover {
-  color: #ffffff;
-  background-color: #b7cadc;
+  background-color: #ffffff;
+  color: #dcc9b7;
   transition: all 0.3s ease;
 }
 .IndexContainer .IndexContent__header .NavList__item .Match {
-  width: 216px;
-  margin-right: 56px;
+  width: 147px;
+  margin-right: 126px;
   text-align: center;
 }
 .IndexContainer .IndexContent__header .NavList__item .Midway {
-  width: 216px;
+  width: 146px;
   text-align: center;
-  margin-right: 66px;
+  margin-right: 294px;
 }
 .IndexContainer .IndexContent__header .NavList__item .Add {
   width: 150px;
@@ -190,6 +194,7 @@ button:hover {
   color: #ffffff;
   font-size: 14px;
   border-bottom: 4px solid #dfe7f1;
+  margin-bottom: 2px;
 }
 .IndexContainer .IndexTable__head .id {
   width: 72px;

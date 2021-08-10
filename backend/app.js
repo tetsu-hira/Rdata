@@ -57,11 +57,12 @@ app.get("/number", function(req, res) {
   });
 });
 app.post("/create", (req, res) => {
+  console.log(req.body);
   connection.query(
     "INSERT INTO team (id, name) VALUES (?, ?)",
     [ req.body.id, req.body.name ],
     (error, results) => {
-      if (error) throw err;
+      if (error) throw error;
       res.send(results);
       // 一覧画面にリダイレクトする処理
       // res.redirect('http://localhost:3000');
@@ -69,12 +70,46 @@ app.post("/create", (req, res) => {
   );
 });
 app.post("/delete", (req, res) => {
+  console.log(req.body);
   const id = req.body.id;
   connection.query(
-    `DELETE FROM team WHERE id = ?`,
+    "DELETE FROM team WHERE id = ?",
     [ id ],
     (error, results) => {
-      if (error) throw err;
+      if (error) throw error;
+      res.send(results);
+      // 一覧画面にリダイレクトする処理
+      // res.redirect('http://localhost:3000');
+    }
+  );
+});
+app.post("/changecourt", (req, res) => {
+  const id = req.body.id;
+  const court = req.body.court;
+  console.log("開始")
+  console.log(req.body);
+  console.log("終了")
+  console.log(req.body.id);
+  console.log(req.body.court);
+  connection.query(
+  "UPDATE team SET court = ? WHERE id = ?",
+    [ court, id ],
+    (error, results) => {
+      if (error) throw error;
+      res.send(results);
+      // 一覧画面にリダイレクトする処理
+      // res.redirect('http://localhost:3000');
+    }
+  );
+});
+app.post("/changenumber", (req, res) => {
+  const id = req.body.id;
+  const number = req.body.number;
+  connection.query(
+  `UPDATE team SET number = ? WHERE id = ?`,
+    [ number, id ],
+    (error, results) => {
+      if (error) throw error;
       res.send(results);
       // 一覧画面にリダイレクトする処理
       // res.redirect('http://localhost:3000');
@@ -97,7 +132,7 @@ const corsOptions = {
 };
 
 app.use(cors({
-  origin: 'http://localhost:3000', //アクセス許可するオリジン
+  origin: true, //アクセス許可するオリジン
   credentials: true, //レスポンスヘッダーにAccess-Control-Allow-Credentials追加
   optionsSuccessStatus: 200 //レスポンスstatusを200に設定
 }));

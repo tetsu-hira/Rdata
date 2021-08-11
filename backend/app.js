@@ -105,8 +105,47 @@ app.post("/changecourt", (req, res) => {
 app.post("/changenumber", (req, res) => {
   const id = req.body.id;
   const number = req.body.number;
+  console.log("開始")
+  console.log(req.body);
+  console.log("終了")
   connection.query(
   `UPDATE team SET number = ? WHERE id = ?`,
+    [ number, id ],
+    (error, results) => {
+      if (error) throw error;
+      res.send(results);
+      // 一覧画面にリダイレクトする処理
+      // res.redirect('http://localhost:3000');
+    }
+  );
+});
+app.post("/changemidcourt", (req, res) => {
+  const id = req.body.id;
+  const court = req.body.court;
+  console.log("開始")
+  console.log(req.body);
+  console.log("終了")
+  console.log(req.body.id);
+  console.log(req.body.court);
+  connection.query(
+  "UPDATE team SET mid_court = ? WHERE id = ?",
+    [ court, id ],
+    (error, results) => {
+      if (error) throw error;
+      res.send(results);
+      // 一覧画面にリダイレクトする処理
+      // res.redirect('http://localhost:3000');
+    }
+  );
+});
+app.post("/changemidnumber", (req, res) => {
+  const id = req.body.id;
+  const number = req.body.number;
+  console.log("開始")
+  console.log(req.body);
+  console.log("終了")
+  connection.query(
+  `UPDATE team SET mid_number = ? WHERE id = ?`,
     [ number, id ],
     (error, results) => {
       if (error) throw error;

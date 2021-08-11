@@ -10,6 +10,10 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin-bottom: 8px;
+        h1 {
+          padding-top: 10px;
+        }
         .NavList {
           line-height: 24px;
           list-style: none;
@@ -39,13 +43,13 @@
             }
             .Match {
               width: 147px;
-              margin-right: 126px;
+              margin-right: 92px;
               text-align: center;
             }
             .Midway {
               width: 146px;
               text-align: center;
-              margin-right: 294px;
+              margin-right: 264px;
             }
             .Add {
               width: 150px;
@@ -63,7 +67,7 @@
         border-radius: 10px 10px 0 0;
         height: 50px;
         font-size: 16px;
-        line-height: 24px;
+        line-height: 17px;
         color: #ffffff;
         font-size: 14px;
         border-bottom: 4px solid $BackColor;
@@ -77,23 +81,23 @@
           margin: auto auto auto 0;
         }
         .point {
-          width: 72px;
+          width: 80px;
           text-align: center;
           overflow-wrap: normal;
           margin: auto 0;
         }
         .score {
-          width: 72px;
+          width: 80px;
           text-align: center;
           margin: auto 0;
         }
         .court {
-          width: 72px;
+          width: 80px;
           text-align: center;
-          margin: auto 56px auto 0;
+          margin: auto 0;
         }
         .sum {
-          width: 72px;
+          width: 80px;
           text-align: center;
           overflow-wrap: normal;
           margin: auto 0;
@@ -143,17 +147,18 @@
                 -webkit-appearance: none;
                 -moz-appearance: none;
                 appearance: none;
-                padding: 0 12px;
+                padding: 0 14px;
                 margin-left: 1px;
                 // border: none;
                 text-align-last:right;
                 outline: none;
                 // appearance: none;
+                height: 33px;
                 .court {
                   font-size: 14px;
                   font-weight: 500;
                   color: $FontColor;
-                  width: 36px;
+                  width: 42px;
                   font-weight: 600;
                   margin: auto;
                   text-align: center;
@@ -165,7 +170,7 @@
                   font-size: 14px;
                   font-weight: 500;
                   color: $FontColor;
-                  width: 36px;
+                  width: 42px;
                   font-weight: 600;
                   margin: auto;
                   text-align: center;
@@ -177,7 +182,7 @@
               .point {
                 font-size: 14px;
                 font-weight: 500;
-                width: 72px;
+                width: 80px;
                 font-weight: 600;
                 height: 36px;
                 line-height: 40px;
@@ -189,7 +194,7 @@
                 font-size: 14px;
                 font-weight: 500;
                 color: $FontColor;
-                width: 72px;
+                width: 80px;
                 font-weight: 600;
                 height: 36px;
                 line-height: 40px;

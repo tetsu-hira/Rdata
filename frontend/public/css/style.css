@@ -141,6 +141,10 @@ button:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 8px;
+}
+.IndexContainer .IndexContent__header h1 {
+  padding-top: 10px;
 }
 .IndexContainer .IndexContent__header .NavList {
   line-height: 24px;
@@ -171,13 +175,13 @@ button:hover {
 }
 .IndexContainer .IndexContent__header .NavList__item .Match {
   width: 147px;
-  margin-right: 126px;
+  margin-right: 92px;
   text-align: center;
 }
 .IndexContainer .IndexContent__header .NavList__item .Midway {
   width: 146px;
   text-align: center;
-  margin-right: 294px;
+  margin-right: 264px;
 }
 .IndexContainer .IndexContent__header .NavList__item .Add {
   width: 150px;
@@ -190,7 +194,7 @@ button:hover {
   border-radius: 10px 10px 0 0;
   height: 50px;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 17px;
   color: #ffffff;
   font-size: 14px;
   border-bottom: 4px solid #dfe7f1;
@@ -205,23 +209,23 @@ button:hover {
   margin: auto auto auto 0;
 }
 .IndexContainer .IndexTable__head .point {
-  width: 72px;
+  width: 80px;
   text-align: center;
   overflow-wrap: normal;
   margin: auto 0;
 }
 .IndexContainer .IndexTable__head .score {
-  width: 72px;
+  width: 80px;
   text-align: center;
   margin: auto 0;
 }
 .IndexContainer .IndexTable__head .court {
-  width: 72px;
+  width: 80px;
   text-align: center;
-  margin: auto 56px auto 0;
+  margin: auto 0;
 }
 .IndexContainer .IndexTable__head .sum {
-  width: 72px;
+  width: 80px;
   text-align: center;
   overflow-wrap: normal;
   margin: auto 0;
@@ -273,16 +277,17 @@ button:hover {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  padding: 0 12px;
+  padding: 0 14px;
   margin-left: 1px;
   text-align-last: right;
   outline: none;
+  height: 33px;
 }
 .IndexContainer .IndexTable__body li .ItemData .FlexRight select .court {
   font-size: 14px;
   font-weight: 500;
   color: #6c7686;
-  width: 36px;
+  width: 42px;
   font-weight: 600;
   margin: auto;
   text-align: center;
@@ -294,7 +299,7 @@ button:hover {
   font-size: 14px;
   font-weight: 500;
   color: #6c7686;
-  width: 36px;
+  width: 42px;
   font-weight: 600;
   margin: auto;
   text-align: center;
@@ -305,7 +310,7 @@ button:hover {
 .IndexContainer .IndexTable__body li .ItemData .FlexRight .point {
   font-size: 14px;
   font-weight: 500;
-  width: 72px;
+  width: 80px;
   font-weight: 600;
   height: 36px;
   line-height: 40px;
@@ -317,7 +322,7 @@ button:hover {
   font-size: 14px;
   font-weight: 500;
   color: #6c7686;
-  width: 72px;
+  width: 80px;
   font-weight: 600;
   height: 36px;
   line-height: 40px;

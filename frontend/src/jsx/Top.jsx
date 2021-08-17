@@ -3,6 +3,7 @@ import Header from './Header.jsx';
 import axios from "axios";
 import Form from "./Form.jsx"
 import React from "react";
+import Button from './Button.jsx';
 import {
   BrowserRouter as Router,
   Switch,
@@ -23,6 +24,7 @@ function Top() {
   const [changeMidNumber, setChangeMidNumber] = useState();
   const [teamList, setTeamList] = useState([]);
   const [teamId, setTeamId] = useState();
+  
 
   useState(() => {
     console.log("コート");
@@ -108,6 +110,9 @@ function Top() {
                 <Link to="/mid" className="Midway">中間リーグ結果入力</Link>
               </li>
             </ul>
+          </div>
+          <div className="IndexButton>">
+            <Button />
           </div>
           <div className="IndexTable">
             <div className="IndexTable__head">

@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import Header from './Header.jsx';
 import axios from "axios";
 import Form from "./Form.jsx"
 import React from "react";
-import Button from './Button.jsx';
+import Sort from './Sort.jsx';
 import {
   BrowserRouter as Router,
   Switch,
@@ -24,10 +24,14 @@ function Top() {
   const [changeMidNumber, setChangeMidNumber] = useState();
   const [teamList, setTeamList] = useState([]);
   const [teamId, setTeamId] = useState();
+  const [keys, setKeys] = useState([]);
+  const [sort, setSort] =useState({});
+  
   
 
   useState(() => {
     console.log("コート");
+    
    
     axios.get('/court')
       .then((res) => {
@@ -82,19 +86,59 @@ function Top() {
       number: changeMidNumber,
     });
   };
+  const handleSort = (key) => {
+    if (sort.key === key) {
+      setSort({ ...sort, order: -sort.order });
+    } else {
+      setSort({
+        key: key,
+        order: 1
+      })
+    }
+  };
+  let sortedTeams = useMemo(() => {
+    let _sortedTeams = team;
+    if (sort.key) {
+      _sortedTeams = _sortedTeams.sort((a, b) => {
+        a = a[sort.key];
+        b = b[sort.key];
 
+        if(a === b) {
+          return 0;
+        }
+        if(a > b) {
+          return 1 * sort.order;
+        }
+        if(a < b) {
+          return -1 * sort.order;
+        }
+      });
+    }
+    return _sortedTeams;
+  }, [sort, team.id]);
+
+  useState(() => {
+    console.log("ソート");
+   
+    const url = '/posts';
+    axios.get(url)
+      .then((res) => {
+        setKeys(Object.keys(res.data[0]));
+        console.log(Object.keys(res.data[0]));
+      })
+  },[])
   
 
   useEffect(() => {
     console.log("副作用関数が実行されました");
-
+    
     const url = '/posts';
     axios.get(url)
       .then((res) => {
         setTeam(res.data);
       })
   },[])
-  
+
   return (
     <>
       <Header />
@@ -112,10 +156,30 @@ function Top() {
             </ul>
           </div>
           <div className="IndexButton>">
-            <Button />
+            
+            <Sort
+              key={keys[2]}
+              button={keys[2]}
+              handleSort={handleSort}
+            />
+            <Sort
+              key={keys[10]}
+              button={keys[10]}
+              handleSort={handleSort}
+            />
+            <Sort
+              key={keys[8]}
+              button={keys[8]}
+              handleSort={handleSort}
+            />
           </div>
           <div className="IndexTable">
             <div className="IndexTable__head">
+              <Sort
+                key={keys[0]}
+                button={keys[0]}
+                handleSort={handleSort}
+              />
               <div className="id">No.</div>
               <div className="name">チーム名</div>
               <div className="point">予選<br />勝ち点</div>

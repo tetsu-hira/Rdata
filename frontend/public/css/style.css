@@ -105,6 +105,46 @@ button:hover {
   background-color: #ffffff;
 }
 
+.SortButton {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  position: relative;
+  display: inline-block;
+  margin: 0 8px 8px 0;
+  padding: 0.4em 2em 0.4em 1.2em;
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.SortButton:after {
+  position: absolute;
+  top: calc(50% - 5px);
+  right: 8px;
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid #ccc;
+  border-right: 2px solid #ccc;
+  transform: rotate(135deg);
+  transition: 0.3s ease;
+}
+.SortButton.active:after {
+  border-color: #666;
+}
+.SortButton.active.asc:after {
+  top: calc(50% - 3px);
+  transform: rotate(315deg);
+}
+.SortButton.active.desc:after {
+  top: calc(50% - 5px);
+  transform: rotate(135deg);
+}
+
 .Form {
   display: flex;
 }

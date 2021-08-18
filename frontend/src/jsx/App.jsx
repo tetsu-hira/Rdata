@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
-import Header from './Header.jsx';
-import axios from "axios";
-import Form from "./Form.jsx";
+// import { useEffect, useState } from "react";
+// import Header from './Header.jsx';
+// import axios from "axios";
+// import Form from "./Form.jsx";
 import React from "react";
 import Top from "./Top.jsx";
 import Pre from "./Pre.jsx";
@@ -9,8 +9,8 @@ import Mid from "./Mid.jsx";
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
+  // Link
 } from "react-router-dom";
 
 

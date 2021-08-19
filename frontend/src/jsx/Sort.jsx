@@ -1,12 +1,14 @@
 import React from 'react';
 
-const Sort = ({ button, handleSort, sort }) => {
+const Sort = ({ button, handleSort, name }) => {
   return (
-    <button
-      onClick={() => handleSort(button)}
-      className="SortButton">
-      {button}
-    </button>
+    <div className="SortButton">
+      <button
+        onClick={() => handleSort(button)}
+        className={button} value={name}>
+        {name}
+      </button>
+    </div>
   )
 }
 

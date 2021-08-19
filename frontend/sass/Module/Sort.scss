@@ -1,43 +1,84 @@
 .SortButton {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  border: none;
-  position: relative;
   display: inline-block;
-  margin: 0 8px 8px 0;
-  padding: .4em 2em .4em 1.2em;
-  background: none;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  text-align: center;
-  cursor: pointer;
-  transition: .3s ease;
-
-  &:after {
-    position: absolute;
-    top: calc(50% - 5px);
-    right: 8px;
-    content: '';
-    display: block;
-    width: 8px;
-    height: 8px;
-    border-top: 2px solid #ccc;
-    border-right: 2px solid #ccc;
-    transform: rotate(135deg);
+  button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    position: relative;
+    // margin: 0 8px 8px 0;
+    // padding: .4em 2em .4em 1.2em;
+    background: none;
+    // border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
     transition: .3s ease;
+    color: #fff;
+  }
+  .id {
+    width: 72px;
+  }
+  .name {
+    width: 272px;
+    text-align: left;
+    padding-left: 20px;
+  }
+  .pre_point {
+    width: 80px;
+  }
+  .pre_score {
+    width: 80px;
+  }
+  .court {
+    width: 41px;
+  }
+  .number {
+    width: 39px;
+  }
+  .mid_point {
+    width: 80px;
+  }
+  .mid_score {
+    width: 80px;
+  }
+  .mid_court {
+    width: 41px;
+  }
+  .mid_number {
+    width: 39px;
+  }
+  .sum_point {
+    width: 80px;
+  }
+  .sum_score {
+    width: 80px;
   }
 
-  &.active:after {
-    border-color: #666;
-  }
+  // &:after {
+  //   position: absolute;
+  //   top: calc(50% - 5px);
+  //   right: 8px;
+  //   content: '';
+  //   display: block;
+  //   width: 8px;
+  //   height: 8px;
+  //   border-top: 2px solid #ccc;
+  //   border-right: 2px solid #ccc;
+  //   transform: rotate(135deg);
+  //   transition: .3s ease;
+  // }
 
-  &.active.asc:after {
-    top: calc(50% - 3px);
-    transform: rotate(315deg);
-  }
+  // &.active:after {
+  //   border-color: #666;
+  // }
 
-  &.active.desc:after {
-    top: calc(50% - 5px);
-    transform: rotate(135deg);
-  }
+  // &.active.asc:after {
+  //   top: calc(50% - 3px);
+  //   transform: rotate(315deg);
+  // }
+
+  // &.active.desc:after {
+  //   top: calc(50% - 5px);
+  //   transform: rotate(135deg);
+  // }
 }

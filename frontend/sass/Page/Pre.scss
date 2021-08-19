@@ -1,0 +1,63 @@
+.Pre {
+  &Container {
+    width: 90%;
+    min-width: 600px;
+    max-width: 960px;
+    margin: 0 auto 200px 80px;
+    .PreHeader {
+      margin: 0 0 12px;
+      h1 {
+        font-size: 24px;
+      }
+    }
+    .PreMain {
+      .Table {
+        &Title {
+          background-color: $PrimaryColor;
+          color: white;
+          font-size: 16px;
+          &__number {
+            width: 80px;
+          }
+          &__team {
+            width: 320px;
+          }
+          &__referee {
+            width: 240px;
+          }
+        }
+        &Content {
+          color: $FontColor;
+          background-color: $BackColor;
+          font-size: 16px;
+          &__number {
+            width: 80px;
+          }
+          &__teamA {
+            width: 320px;
+            font-size: 24px;
+          }
+          &__flex {
+            display: flex;
+            .left {
+              margin: 0 8px 8px;
+            }
+            .right {
+              margin: 0 8px 8px;
+            }
+            p {
+              font-size: 8px;
+            }
+          }
+          &__teamB {
+            width: 320px;
+            font-size: 24px;
+          }
+          &__referee {
+            width: 240px;
+          }
+        }
+      }
+    }
+  }
+}

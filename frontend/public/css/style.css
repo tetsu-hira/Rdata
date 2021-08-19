@@ -49,24 +49,6 @@ input {
   display: block;
 }
 
-button {
-  background: #dcc9b7;
-  font-size: 12px;
-  width: 100px;
-  height: 40px;
-  line-height: 20px;
-  text-align: center;
-  color: #fff;
-  border: 1px solid #dcc9b7;
-  margin: 8px 0;
-  box-shadow: 3px 2px 8px 0 rgba(0, 0, 0, 0.2);
-}
-button:hover {
-  background-color: #ffffff;
-  color: #dcc9b7;
-  transition: all 0.3s ease;
-}
-
 .Header {
   height: 56px;
   background-color: #b7cadc;
@@ -106,43 +88,57 @@ button:hover {
 }
 
 .SortButton {
+  display: inline-block;
+}
+.SortButton button {
   -webkit-appearance: none;
   -moz-appearance: none;
   border: none;
   position: relative;
-  display: inline-block;
-  margin: 0 8px 8px 0;
-  padding: 0.4em 2em 0.4em 1.2em;
   background: none;
-  border: 1px solid #ccc;
   border-radius: 4px;
   text-align: center;
   cursor: pointer;
   transition: 0.3s ease;
+  color: #fff;
 }
-.SortButton:after {
-  position: absolute;
-  top: calc(50% - 5px);
-  right: 8px;
-  content: "";
-  display: block;
-  width: 8px;
-  height: 8px;
-  border-top: 2px solid #ccc;
-  border-right: 2px solid #ccc;
-  transform: rotate(135deg);
-  transition: 0.3s ease;
+.SortButton .id {
+  width: 72px;
 }
-.SortButton.active:after {
-  border-color: #666;
+.SortButton .name {
+  width: 272px;
+  text-align: left;
+  padding-left: 20px;
 }
-.SortButton.active.asc:after {
-  top: calc(50% - 3px);
-  transform: rotate(315deg);
+.SortButton .pre_point {
+  width: 80px;
 }
-.SortButton.active.desc:after {
-  top: calc(50% - 5px);
-  transform: rotate(135deg);
+.SortButton .pre_score {
+  width: 80px;
+}
+.SortButton .court {
+  width: 41px;
+}
+.SortButton .number {
+  width: 39px;
+}
+.SortButton .mid_point {
+  width: 80px;
+}
+.SortButton .mid_score {
+  width: 80px;
+}
+.SortButton .mid_court {
+  width: 41px;
+}
+.SortButton .mid_number {
+  width: 39px;
+}
+.SortButton .sum_point {
+  width: 80px;
+}
+.SortButton .sum_score {
+  width: 80px;
 }
 
 .Form {
@@ -166,6 +162,23 @@ button:hover {
   align-items: center;
   margin: auto 8px;
   width: 222px;
+}
+.Form button {
+  background: #dcc9b7;
+  font-size: 12px;
+  width: 100px;
+  height: 40px;
+  line-height: 20px;
+  text-align: center;
+  color: #fff;
+  border: 1px solid #dcc9b7;
+  margin: 8px 0;
+  box-shadow: 3px 2px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.Form button:hover {
+  background-color: #ffffff;
+  color: #dcc9b7;
+  transition: all 0.3s ease;
 }
 
 .Index {
@@ -228,52 +241,55 @@ button:hover {
   text-align: right;
   margin-left: 40px;
 }
+.IndexContainer .IndexTable__container {
+  background-color: #b7cadc;
+  border-bottom: 6px solid #dfe7f1;
+  border-radius: 10px 10px 0 0;
+}
 .IndexContainer .IndexTable__head {
   display: flex;
   background-color: #b7cadc;
-  border-radius: 10px 10px 0 0;
-  height: 50px;
+  height: 42px;
   font-size: 16px;
   line-height: 17px;
   color: #ffffff;
   font-size: 14px;
-  border-bottom: 4px solid #dfe7f1;
   margin-bottom: 2px;
 }
 .IndexContainer .IndexTable__head .id {
   width: 72px;
   text-align: center;
-  margin: auto 0;
+  margin: auto 0 0 0;
 }
 .IndexContainer .IndexTable__head .name {
-  margin: auto auto auto 0;
+  margin: auto auto 0 0;
 }
 .IndexContainer .IndexTable__head .point {
   width: 80px;
   text-align: center;
   overflow-wrap: normal;
-  margin: auto 0;
+  margin: auto 0 0 0;
 }
 .IndexContainer .IndexTable__head .score {
   width: 80px;
   text-align: center;
-  margin: auto 0;
+  margin: auto 0 0 0;
 }
 .IndexContainer .IndexTable__head .court {
   width: 80px;
   text-align: center;
-  margin: auto 0;
+  margin: auto 0 0 0;
 }
 .IndexContainer .IndexTable__head .sum {
   width: 80px;
   text-align: center;
   overflow-wrap: normal;
-  margin: auto 0;
+  margin: auto 0 0 0;
 }
 .IndexContainer .IndexTable__head .rank {
   width: 56px;
   text-align: center;
-  margin: auto 0;
+  margin: auto 0 0 0;
 }
 .IndexContainer .IndexTable__body {
   background-color: #ffffff;
@@ -312,16 +328,22 @@ button:hover {
   justify-content: flex-end;
   margin-left: auto;
 }
+.IndexContainer .IndexTable__body li .ItemData .FlexRight .change {
+  background-color: #f5f5f5;
+  margin: 0;
+  width: 40px;
+}
 .IndexContainer .IndexTable__body li .ItemData .FlexRight select {
   cursor: pointer;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  padding: 0 14px;
-  margin-left: 1px;
+  padding: 0 10px;
+  margin: 4px 4px 3px;
   text-align-last: right;
   outline: none;
-  height: 33px;
+  color: #6c7686;
+  height: 29px;
 }
 .IndexContainer .IndexTable__body li .ItemData .FlexRight select .court {
   font-size: 14px;
@@ -374,7 +396,7 @@ button:hover {
   font-size: 14px;
   font-weight: 500;
   color: #6c7686;
-  width: 56px;
+  width: 55px;
   margin-right: 0;
   text-align: center;
   margin: auto;
@@ -399,4 +421,62 @@ button:hover {
 .IndexContainer .IndexTable__body li .ItemData .FlexRight form input:hover {
   color: #ff7f8c;
   transition: all 0.3s ease;
+}
+
+.PreContainer {
+  width: 90%;
+  min-width: 600px;
+  max-width: 960px;
+  margin: 0 auto 200px 80px;
+}
+.PreContainer .PreHeader {
+  margin: 0 0 12px;
+}
+.PreContainer .PreHeader h1 {
+  font-size: 24px;
+}
+.PreContainer .PreMain .TableTitle {
+  background-color: #b7cadc;
+  color: white;
+  font-size: 16px;
+}
+.PreContainer .PreMain .TableTitle__number {
+  width: 80px;
+}
+.PreContainer .PreMain .TableTitle__team {
+  width: 320px;
+}
+.PreContainer .PreMain .TableTitle__referee {
+  width: 240px;
+}
+.PreContainer .PreMain .TableContent {
+  color: #6c7686;
+  background-color: #dfe7f1;
+  font-size: 16px;
+}
+.PreContainer .PreMain .TableContent__number {
+  width: 80px;
+}
+.PreContainer .PreMain .TableContent__teamA {
+  width: 320px;
+  font-size: 24px;
+}
+.PreContainer .PreMain .TableContent__flex {
+  display: flex;
+}
+.PreContainer .PreMain .TableContent__flex .left {
+  margin: 0 8px 8px;
+}
+.PreContainer .PreMain .TableContent__flex .right {
+  margin: 0 8px 8px;
+}
+.PreContainer .PreMain .TableContent__flex p {
+  font-size: 8px;
+}
+.PreContainer .PreMain .TableContent__teamB {
+  width: 320px;
+  font-size: 24px;
+}
+.PreContainer .PreMain .TableContent__referee {
+  width: 240px;
 }

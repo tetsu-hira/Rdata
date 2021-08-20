@@ -3,7 +3,7 @@
   button {
     -webkit-appearance: none;
     -moz-appearance: none;
-    border: none;
+    border: 1px solid $BackColor;
     position: relative;
     // margin: 0 8px 8px 0;
     // padding: .4em 2em .4em 1.2em;
@@ -14,44 +14,45 @@
     cursor: pointer;
     transition: .3s ease;
     color: #fff;
+    margin: 2px;
   }
   .id {
-    width: 72px;
+    width: 66px;
   }
   .name {
-    width: 272px;
-    text-align: left;
-    padding-left: 20px;
+    width: 270px;
+    // text-align: left;
+    // padding-left: 20px;
   }
   .pre_point {
-    width: 80px;
+    width: 76px;
   }
   .pre_score {
-    width: 80px;
+    width: 76px;
   }
   .court {
-    width: 41px;
+    width: 37px;
   }
   .number {
-    width: 39px;
+    width: 35px;
   }
   .mid_point {
-    width: 80px;
+    width: 76px;
   }
   .mid_score {
-    width: 80px;
+    width: 76px;
   }
   .mid_court {
-    width: 41px;
+    width: 37px;
   }
   .mid_number {
-    width: 39px;
+    width: 35px;
   }
   .sum_point {
-    width: 80px;
+    width: 76px;
   }
   .sum_score {
-    width: 80px;
+    width: 76px;
   }
 
   // &:after {

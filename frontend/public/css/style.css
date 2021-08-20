@@ -93,7 +93,7 @@ input {
 .SortButton button {
   -webkit-appearance: none;
   -moz-appearance: none;
-  border: none;
+  border: 1px solid #dfe7f1;
   position: relative;
   background: none;
   border-radius: 4px;
@@ -101,44 +101,43 @@ input {
   cursor: pointer;
   transition: 0.3s ease;
   color: #fff;
+  margin: 2px;
 }
 .SortButton .id {
-  width: 72px;
+  width: 66px;
 }
 .SortButton .name {
-  width: 272px;
-  text-align: left;
-  padding-left: 20px;
+  width: 270px;
 }
 .SortButton .pre_point {
-  width: 80px;
+  width: 76px;
 }
 .SortButton .pre_score {
-  width: 80px;
+  width: 76px;
 }
 .SortButton .court {
-  width: 41px;
+  width: 37px;
 }
 .SortButton .number {
-  width: 39px;
+  width: 35px;
 }
 .SortButton .mid_point {
-  width: 80px;
+  width: 76px;
 }
 .SortButton .mid_score {
-  width: 80px;
+  width: 76px;
 }
 .SortButton .mid_court {
-  width: 41px;
+  width: 37px;
 }
 .SortButton .mid_number {
-  width: 39px;
+  width: 35px;
 }
 .SortButton .sum_point {
-  width: 80px;
+  width: 76px;
 }
 .SortButton .sum_score {
-  width: 80px;
+  width: 76px;
 }
 
 .Form {
@@ -262,7 +261,7 @@ input {
   margin: auto 0 0 0;
 }
 .IndexContainer .IndexTable__head .name {
-  margin: auto auto 0 0;
+  margin: auto auto 0;
 }
 .IndexContainer .IndexTable__head .point {
   width: 80px;

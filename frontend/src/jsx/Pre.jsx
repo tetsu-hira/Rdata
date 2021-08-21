@@ -18,17 +18,79 @@ const Pre = () => {
   const [countA2, setCountA2] = useState(0);
   const [countA3, setCountA3] = useState(0);
   const [countA4, setCountA4] = useState(0);
-  const [a1, setA1] = useState({});
+  const [a1, setA1] = useState([]);
+  const [a2, setA2] = useState([]);
+  const [a3, setA3] = useState([]);
+  const [a4, setA4] = useState([]);
+  const [b1, setB1] = useState([]);
+  const [b2, setB2] = useState([]);
+  const [b3, setB3] = useState([]);
+  const [b4, setB4] = useState([]);
+  const [c1, setC1] = useState([]);
+  const [c2, setC2] = useState([]);
+  const [c3, setC3] = useState([]);
+  const [c4, setC4] = useState([]);
+  const [d1, setD1] = useState([]);
+  const [d2, setD2] = useState([]);
+  const [d3, setD3] = useState([]);
+  const [d4, setD4] = useState([]);
 
-  useState(() => {
+  useEffect(() => {
     const url = '/posts';
-    axios
-      .get(url)
+    axios.get(url)
       .then((res) => {
         setTeam(res.data);
+        setA1(res.data.filter((item, index) => {
+          return item.court === "A" && item.number === 1;
+        }));
+        setA2(res.data.filter((item, index) => {
+          return item.court === "A" && item.number === 2;
+        }));
+        setA3(res.data.filter((item, index) => {
+          return item.court === "A" && item.number === 3;
+        }));
+        setA4(res.data.filter((item, index) => {
+          return item.court === "A" && item.number === 4;
+        }));
+        setB1(res.data.filter((item, index) => {
+          return item.court === "B" && item.number === 1;
+        }));
+        setB2(res.data.filter((item, index) => {
+          return item.court === "B" && item.number === 2;
+        }));
+        setB3(res.data.filter((item, index) => {
+          return item.court === "B" && item.number === 3;
+        }));
+        setB4(res.data.filter((item, index) => {
+          return item.court === "B" && item.number === 4;
+        }));
+        setC1(res.data.filter((item, index) => {
+          return item.court === "C" && item.number === 1;
+        }));
+        setC2(res.data.filter((item, index) => {
+          return item.court === "C" && item.number === 2;
+        }));
+        setC3(res.data.filter((item, index) => {
+          return item.court === "C" && item.number === 3;
+        }));
+        setC4(res.data.filter((item, index) => {
+          return item.court === "C" && item.number === 4;
+        }));
+        setD1(res.data.filter((item, index) => {
+          return item.court === "D" && item.number === 1;
+        }));
+        setD2(res.data.filter((item, index) => {
+          return item.court === "D" && item.number === 2;
+        }));
+        setD3(res.data.filter((item, index) => {
+          return item.court === "D" && item.number === 3;
+        }));
+        setD4(res.data.filter((item, index) => {
+          return item.court === "D" && item.number === 4;
+        }));
       })
   },[])
-  useState(() => {
+  useEffect(() => {
     const urlGame = '/game';
     axios.get(urlGame)
       .then((res) => {
@@ -36,21 +98,24 @@ const Pre = () => {
       })
   },[])
 
-  const A1 = team.filter((item, index) => {
-    return item.court == "C" && item.number == 1;
-  })
+
+  // const A1 = team.filter((item, index) => {
+  //   return item.court === "C" && item.number === 1;
+  // })
   
 
   // useEffect(() => {
   //   setA1(team.filter((item, index) => {
-  //       return item.court == "C" && item.number == 1;
+  //       return item.court === "C" && item.number === 1;
   //     }))
   // },[]);
 
-  
+  console.log("1");
   console.log(team);
+  console.log("2");
   console.log(game);
-  console.log(A1);
+  console.log("3");
+  console.log(a1);
   
   return (
     <>
@@ -62,7 +127,7 @@ const Pre = () => {
           </div>
           <div className="PreMain">
             <div className="Table">
-              <table border="2" bordercolor="black">
+              <table border="0" bordercolor="black">
                 <thead>
                   <tr className="TableTitle">
                     <th className="TableTitle__number">No.</th>
@@ -74,11 +139,10 @@ const Pre = () => {
                   </tr>
                 </thead>
                 <tbody>
-
                   <tr className="TableContent">
                     <th className="TableContent__number">1</th>
                     <td className="TableContent__teamA">
-                      <p>{A1.name}</p>
+                      <p>{a1[0] && a1[0].name}</p>
                     </td>
                     <td className="TableContent__point">
                       <div className="TableContent__flex">
@@ -117,11 +181,11 @@ const Pre = () => {
                       </div>
                     </td>
                     <td className="TableContent__teamB">
-                      <p>A2</p>
+                      <p>{a2[0] && a2[0].name}</p>
                     </td>
                     <td className="TableContent__space"></td>
                     <td className="TableContent__referee">
-                      <p>A4</p>
+                      <p>{a4[0] && a4[0].name}</p>
                     </td>
                   </tr>
                 </tbody>

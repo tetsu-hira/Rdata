@@ -116,7 +116,7 @@ function Top() {
       });
     }
     return _sortedTeams;
-  }, [sort, team.id]);
+  }, [sort]);
 
   useState(() => {
     console.log("ソート");

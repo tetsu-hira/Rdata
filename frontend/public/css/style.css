@@ -450,7 +450,7 @@ input {
 }
 .PreContainer .PreMain .TableContent {
   color: #6c7686;
-  background-color: #dfe7f1;
+  background-color: #fff;
   font-size: 16px;
 }
 .PreContainer .PreMain .TableContent__number {
@@ -459,6 +459,7 @@ input {
 .PreContainer .PreMain .TableContent__teamA {
   width: 320px;
   font-size: 24px;
+  text-align: center;
 }
 .PreContainer .PreMain .TableContent__flex {
   display: flex;
@@ -475,7 +476,9 @@ input {
 .PreContainer .PreMain .TableContent__teamB {
   width: 320px;
   font-size: 24px;
+  text-align: center;
 }
 .PreContainer .PreMain .TableContent__referee {
   width: 240px;
+  text-align: center;
 }

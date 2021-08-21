@@ -28,7 +28,7 @@
         }
         &Content {
           color: $FontColor;
-          background-color: $BackColor;
+          background-color: #fff;
           font-size: 16px;
           &__number {
             width: 80px;
@@ -36,6 +36,7 @@
           &__teamA {
             width: 320px;
             font-size: 24px;
+            text-align: center;
           }
           &__flex {
             display: flex;
@@ -52,9 +53,11 @@
           &__teamB {
             width: 320px;
             font-size: 24px;
+            text-align: center;
           }
           &__referee {
             width: 240px;
+            text-align: center;
           }
         }
       }

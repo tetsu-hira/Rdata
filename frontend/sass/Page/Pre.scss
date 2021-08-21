@@ -1,8 +1,7 @@
 .Pre {
   &Container {
     width: 90%;
-    min-width: 600px;
-    max-width: 960px;
+    width: 1040px;
     margin: 0 auto 200px 80px;
     .PreHeader {
       margin: 0 0 12px;
@@ -12,6 +11,12 @@
     }
     .PreMain {
       .Table {
+        td {
+          border: 1px solid $BackColor;
+        }
+        th {
+          border: 1px solid $BackColor;
+        }
         &Title {
           background-color: $PrimaryColor;
           color: white;
@@ -22,6 +27,7 @@
           &__team {
             width: 320px;
           }
+         
           &__referee {
             width: 240px;
           }
@@ -30,6 +36,7 @@
           color: $FontColor;
           background-color: #fff;
           font-size: 16px;
+          
           &__number {
             width: 80px;
           }
@@ -39,15 +46,47 @@
             text-align: center;
           }
           &__flex {
-            display: flex;
-            .left {
-              margin: 0 8px 8px;
-            }
-            .right {
-              margin: 0 8px 8px;
-            }
-            p {
-              font-size: 8px;
+            // display: flex;
+            width: 400px;
+            padding: 0 5px;
+            .TableContent__count {
+              display: flex;
+              button {
+                background-color: #5dc3d0;
+                border-radius: 15px;
+                font-size: 12px;
+                width: 24px;
+                height: 34px;
+                line-height: 1px;
+                text-align: center;
+                color: rgb(82, 142, 150);
+                border: none;
+                margin: auto 3px;
+                // overflow: hidden;
+                box-shadow: inset 0px 0px 0 rgba(255,255,255,0.3), 0 3px 3px rgba(0, 0, 0, 0.3);
+                font-weight: bold;
+                border-bottom: solid 3px #549fa9;
+                text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.65);
+                transition: .4s;
+                cursor: pointer;
+                &:active {
+                  -webkit-transform: translateY(1px);
+                  transform: translateY(1px);
+                  box-shadow: 0 0 2px rgba(0, 0, 0, 0.35);
+                  border-bottom: none;
+                }
+              }
+              .CountPoint {
+                font-size: 32px;
+                margin: auto;
+                width: 80px;
+                text-align: center;
+                font-family: Arial, Helvetica, sans-serif;
+              }
+              .UnderLine {
+                font-size: 32px;
+                margin: auto;
+              }
             }
           }
           &__teamB {

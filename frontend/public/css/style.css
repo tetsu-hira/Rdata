@@ -424,8 +424,7 @@ input {
 
 .PreContainer {
   width: 90%;
-  min-width: 600px;
-  max-width: 960px;
+  width: 1040px;
   margin: 0 auto 200px 80px;
 }
 .PreContainer .PreHeader {
@@ -433,6 +432,12 @@ input {
 }
 .PreContainer .PreHeader h1 {
   font-size: 24px;
+}
+.PreContainer .PreMain .Table td {
+  border: 1px solid #dfe7f1;
+}
+.PreContainer .PreMain .Table th {
+  border: 1px solid #dfe7f1;
 }
 .PreContainer .PreMain .TableTitle {
   background-color: #b7cadc;
@@ -462,16 +467,46 @@ input {
   text-align: center;
 }
 .PreContainer .PreMain .TableContent__flex {
+  width: 400px;
+  padding: 0 5px;
+}
+.PreContainer .PreMain .TableContent__flex .TableContent__count {
   display: flex;
 }
-.PreContainer .PreMain .TableContent__flex .left {
-  margin: 0 8px 8px;
+.PreContainer .PreMain .TableContent__flex .TableContent__count button {
+  background-color: #5dc3d0;
+  border-radius: 15px;
+  font-size: 12px;
+  width: 24px;
+  height: 34px;
+  line-height: 1px;
+  text-align: center;
+  color: #528e96;
+  border: none;
+  margin: auto 3px;
+  box-shadow: inset 0px 0px 0 rgba(255, 255, 255, 0.3), 0 3px 3px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+  border-bottom: solid 3px #549fa9;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.65);
+  transition: 0.4s;
+  cursor: pointer;
 }
-.PreContainer .PreMain .TableContent__flex .right {
-  margin: 0 8px 8px;
+.PreContainer .PreMain .TableContent__flex .TableContent__count button:active {
+  -webkit-transform: translateY(1px);
+  transform: translateY(1px);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.35);
+  border-bottom: none;
 }
-.PreContainer .PreMain .TableContent__flex p {
-  font-size: 8px;
+.PreContainer .PreMain .TableContent__flex .TableContent__count .CountPoint {
+  font-size: 32px;
+  margin: auto;
+  width: 80px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.PreContainer .PreMain .TableContent__flex .TableContent__count .UnderLine {
+  font-size: 32px;
+  margin: auto;
 }
 .PreContainer .PreMain .TableContent__teamB {
   width: 320px;

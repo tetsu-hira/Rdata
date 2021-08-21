@@ -165,6 +165,24 @@ app.post("/changemidnumber", (req, res) => {
     }
   );
 });
+app.post("/count", (req, res) => {
+  const id = req.body.id;
+  const count = req.body.count;
+  console.log("開始")
+  console.log(req.body);
+  console.log("終了")
+  
+  connection.query(
+  `UPDATE game SET result1 = ? WHERE game_id = ?`,
+    [ count, id ],
+    (error, results) => {
+      if (error) throw error;
+      res.send(results);
+      // 一覧画面にリダイレクトする処理
+      // res.redirect('http://localhost:3000');
+    }
+  );
+});
 
 // app.use(function(req, res, next) {
 //   res.header("Access-Control-Allow-Origin", "*");

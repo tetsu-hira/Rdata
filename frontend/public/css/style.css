@@ -433,6 +433,9 @@ input {
 .PreContainer .PreHeader h1 {
   font-size: 24px;
 }
+.PreContainer .PreMain {
+  margin: 40px 0;
+}
 .PreContainer .PreMain .Table td {
   border: 1px solid #dfe7f1;
 }
@@ -442,7 +445,7 @@ input {
 .PreContainer .PreMain .TableTitle {
   background-color: #b7cadc;
   color: white;
-  font-size: 16px;
+  font-size: 14px;
 }
 .PreContainer .PreMain .TableTitle__number {
   width: 80px;
@@ -474,19 +477,19 @@ input {
   display: flex;
 }
 .PreContainer .PreMain .TableContent__flex .TableContent__count button {
-  background-color: #5dc3d0;
-  border-radius: 15px;
+  background-color: #b7cadc;
+  border-radius: 25px;
   font-size: 12px;
-  width: 24px;
-  height: 34px;
-  line-height: 1px;
+  width: 28px;
+  height: 20px;
   text-align: center;
-  color: #528e96;
+  color: #7290ac;
   border: none;
-  margin: auto 3px;
-  box-shadow: inset 0px 0px 0 rgba(255, 255, 255, 0.3), 0 3px 3px rgba(0, 0, 0, 0.3);
+  margin: auto 2px;
+  box-shadow: inset 0px 0px 0 rgba(255, 255, 255, 0.3), 1px 1px 3px rgba(0, 0, 0, 0.3);
   font-weight: bold;
-  border-bottom: solid 3px #549fa9;
+  border-bottom: solid 1px #7290ac;
+  border-right: solid 1px #7290ac;
   text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.65);
   transition: 0.4s;
   cursor: pointer;
@@ -499,8 +502,8 @@ input {
 }
 .PreContainer .PreMain .TableContent__flex .TableContent__count .CountPoint {
   font-size: 32px;
-  margin: auto;
-  width: 80px;
+  margin: auto 5px;
+  width: 48px;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
 }

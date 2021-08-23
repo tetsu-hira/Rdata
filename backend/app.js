@@ -166,15 +166,33 @@ app.post("/changemidnumber", (req, res) => {
   );
 });
 app.post("/count", (req, res) => {
-  const id = req.body.id;
-  const count = req.body.count;
+  // const id = req.body.id;
+  const count = req.body.countA1;
   console.log("開始")
   console.log(req.body);
   console.log("終了")
   
   connection.query(
-  `UPDATE game SET result1 = ? WHERE game_id = ?`,
-    [ count, id ],
+  `
+    UPDATE game SET result1 = ? WHERE game_id = "a1";
+    UPDATE game SET result2 = ? WHERE game_id = "a1";
+    UPDATE game SET result3 = ? WHERE game_id = "a1";
+    UPDATE game SET result4 = ? WHERE game_id = "a1";
+    UPDATE game SET result1 = ? WHERE game_id = "a2";
+    UPDATE game SET result2 = ? WHERE game_id = "a2";
+    UPDATE game SET result3 = ? WHERE game_id = "a2";
+    UPDATE game SET result4 = ? WHERE game_id = "a2";
+    UPDATE game SET result1 = ? WHERE game_id = "a3";
+    UPDATE game SET result2 = ? WHERE game_id = "a3";
+    UPDATE game SET result3 = ? WHERE game_id = "a3";
+    UPDATE game SET result4 = ? WHERE game_id = "a3";
+    UPDATE game SET result1 = ? WHERE game_id = "a4";
+    UPDATE game SET result2 = ? WHERE game_id = "a4";
+    UPDATE game SET result3 = ? WHERE game_id = "a4";
+    UPDATE game SET result4 = ? WHERE game_id = "a4";
+  
+  `,
+    [ req.body.countA1, req.body.countA2, req.body.countA3, req.body.countA4, req.body.countA5, req.body.countA6, req.body.countA7, req.body.countA8, req.body.countA9, req.body.countA10, req.body.countA11, req.body.countA12, req.body.countA13, req.body.countA14, req.body.countA15, req.body.countA16 ],
     (error, results) => {
       if (error) throw error;
       res.send(results);

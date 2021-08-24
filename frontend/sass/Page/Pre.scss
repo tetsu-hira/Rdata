@@ -1,8 +1,9 @@
 .Pre {
+  padding-top: 80px;
   &Container {
     width: 90%;
     width: 1040px;
-    margin: 0 auto 200px 80px;
+    margin: 0 auto 120px 80px;
     .PreHeader {
       margin: 0 0 12px;
       h1 {
@@ -10,7 +11,7 @@
       }
     }
     .PreMain {
-      margin: 40px 0;
+      padding: 24px 0;
       .Table {
         td {
           border: 1px solid $BackColor;

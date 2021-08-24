@@ -15,6 +15,10 @@
     transition: .3s ease;
     color: #fff;
     margin: 2px;
+    &:hover {
+      color: $PrimaryColor;
+      background-color: #fff;
+    }
   }
   .id {
     width: 66px;

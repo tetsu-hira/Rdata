@@ -5,19 +5,20 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+  position: fixed;
   &Button {
     margin-left: 56px;
     font-weight: 600;
     font-size: 16px;
     line-height: 56px;
-    color: #fff;
+    color: $WhiteColor;
     display: inline-block;
     // border: 1px solid #b7cadc;
     background-color: $PrimaryColor;
     padding: 0 8px;
     &:hover {
-      color: $FontColor;
-      background-color: $BackColor;
+      color: $PrimaryColor;
+      background-color: $WhiteColor;
     }
   }
 }

@@ -11,6 +11,7 @@
         justify-content: space-between;
         align-items: center;
         margin-bottom: 8px;
+        margin-top: 56px;
         h1 {
           padding-top: 10px;
         }
@@ -163,6 +164,10 @@
                 // appearance: none;
                 color: $FontColor;
                 height: 29px;
+                &:hover {
+                  box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.25);
+                  transform: translateY(-0.1875em);
+                }
                 .court {
                   font-size: 14px;
                   font-weight: 500;

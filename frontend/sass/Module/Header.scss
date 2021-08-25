@@ -7,18 +7,52 @@
   justify-content: space-between;
   position: fixed;
   &Button {
-    margin-left: 56px;
+    margin-left: 16px;
     font-weight: 600;
     font-size: 16px;
     line-height: 56px;
-    color: $WhiteColor;
+    color: $FontColor;
     display: inline-block;
     // border: 1px solid #b7cadc;
     background-color: $PrimaryColor;
     padding: 0 8px;
+    width: 120px;
+    text-align: center;
     &:hover {
-      color: $PrimaryColor;
-      background-color: $WhiteColor;
+      border-top: 2px solid #9cb4ca;
+      border-right: 2px solid #d0e0ee;
+      // border-bottom: 1px solid #d0e0ee;
+      border-left: 1px solid #87a2ba;
+      transition: 0.1s;
+    }
+  }
+  .JumpList {
+    display: flex;
+    line-height: 56px;
+    &__item {
+      height: 56px;
+      width: 96px;
+      display: inline-block;
+      padding: 0;
+      &:last-child {
+        margin-right: 80px;
+      }
+      a {
+        margin: auto;
+        text-align: center;
+        display: block;
+        width: 100%;
+        height: 100%;
+        color: $FontColor;
+        font-weight: 600;
+        &:hover {
+          border-top: 2px solid #9cb4ca;
+          border-right: 2px solid #d0e0ee;
+          // border-bottom: 1px solid #d0e0ee;
+          border-left: 1px solid #87a2ba;
+          transition: 0.1s;
+        }
+      }
     }
   }
 }

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Header from './Header.jsx';
+import AnchorLink from "react-anchor-link-smooth-scroll/";
 import axios from "axios";
 // import Form from "./Form.jsx"
 import React from "react";
@@ -312,14 +312,25 @@ const Pre = () => {
     <>
       <div className="Header">
         <a href="/" className="HeaderButton" onClick={handleChangeCount}>HOME</a>
+        <ul className="JumpList">
+          <li className="JumpList__item">
+            <AnchorLink href="#courtA">Aコート</AnchorLink>
+          </li>
+          <li className="JumpList__item">
+            <AnchorLink href="#courtB">Bコート</AnchorLink>
+          </li>
+          <li className="JumpList__item">
+            <AnchorLink href="#courtC">Cコート</AnchorLink>
+          </li>
+          <li className="JumpList__item">
+            <AnchorLink href="#courtD">Dコート</AnchorLink>
+          </li>
+        </ul>
       </div>
       <div className="Pre">
         <div className="PreContainer">
-          {/* <div className="PreHeader">
-            <h1></h1>
-          </div> */}
+          <section id="courtA" className="JumpPoint"></section>
           <div className="PreMain">
-            <a id="courtA" className="JumpPoint"></a>
             <h2>予選リーグAコート</h2>
             <div className="Table">
               <table>
@@ -509,8 +520,8 @@ const Pre = () => {
               </table>
             </div>
           </div>
+          <section id="courtB" className="JumpPoint"></section>
           <div className="PreMain">
-            <a id="courtA" className="JumpPoint"></a>
             <h2>予選リーグBコート</h2>
             <div className="Table">
               <table>
@@ -700,8 +711,8 @@ const Pre = () => {
               </table>
             </div>
           </div>
+          <section id="courtC" className="JumpPoint"></section>
           <div className="PreMain">
-            <a id="courtA" className="JumpPoint"></a>
             <h2>予選リーグCコート</h2>
             <div className="Table">
               <table>
@@ -891,8 +902,8 @@ const Pre = () => {
               </table>
             </div>
           </div>
+          <section id="courtD" className="JumpPoint"></section>
           <div className="PreMain">
-            <a id="courtA" className="JumpPoint"></a>
             <h2>予選リーグDコート</h2>
             <div className="Table">
               <table>

@@ -327,9 +327,10 @@ const Pre = () => {
           </li>
         </ul>
       </div>
+      <section id="courtA" className="JumpPoint"></section>
       <div className="Pre">
         <div className="PreContainer">
-          <section id="courtA" className="JumpPoint"></section>
+          
           <div className="PreMain">
             <h2>予選リーグAコート</h2>
             <div className="Table">
@@ -518,9 +519,9 @@ const Pre = () => {
                   </tr>
                 </tbody>
               </table>
+              <section id="courtB" className="JumpPoint"></section>
             </div>
           </div>
-          <section id="courtB" className="JumpPoint"></section>
           <div className="PreMain">
             <h2>予選リーグBコート</h2>
             <div className="Table">
@@ -709,9 +710,9 @@ const Pre = () => {
                   </tr>
                 </tbody>
               </table>
+              <section id="courtC" className="JumpPoint"></section>
             </div>
           </div>
-          <section id="courtC" className="JumpPoint"></section>
           <div className="PreMain">
             <h2>予選リーグCコート</h2>
             <div className="Table">
@@ -900,9 +901,9 @@ const Pre = () => {
                   </tr>
                 </tbody>
               </table>
+              <section id="courtD" className="JumpPoint"></section>
             </div>
           </div>
-          <section id="courtD" className="JumpPoint"></section>
           <div className="PreMain">
             <h2>予選リーグDコート</h2>
             <div className="Table">

@@ -68,6 +68,7 @@ input {
   padding: 0 8px;
   width: 120px;
   text-align: center;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.65);
 }
 .HeaderButton:hover {
   border-top: 2px solid #9cb4ca;
@@ -84,9 +85,10 @@ input {
   width: 96px;
   display: inline-block;
   padding: 0;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.65);
 }
 .Header .JumpList__item:last-child {
-  margin-right: 80px;
+  margin-right: 160px;
 }
 .Header .JumpList__item a {
   margin: auto;
@@ -473,11 +475,15 @@ input {
 
 .Pre {
   padding-top: 80px;
+  padding-bottom: 200px;
 }
 .PreContainer {
   width: 90%;
   width: 1040px;
   margin: 0 auto 120px 80px;
+}
+.PreContainer section {
+  margin-bottom: 40px;
 }
 .PreContainer .PreMain {
   padding: 24px 0;
@@ -490,7 +496,8 @@ input {
 }
 .PreContainer .PreMain .TableTitle {
   background-color: #b7cadc;
-  color: white;
+  color: #6c7686;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.65);
   font-size: 14px;
 }
 .PreContainer .PreMain .TableTitle__number {
@@ -514,6 +521,7 @@ input {
   width: 320px;
   font-size: 24px;
   text-align: center;
+  font-weight: bold;
 }
 .PreContainer .PreMain .TableContent__flex {
   width: 400px;
@@ -523,26 +531,23 @@ input {
   display: flex;
 }
 .PreContainer .PreMain .TableContent__flex .TableContent__count button {
-  background-color: #b7cadc;
+  background-color: #f5f5f5;
   border-radius: 25px;
   font-size: 12px;
   width: 28px;
   height: 20px;
   text-align: center;
-  color: #7290ac;
+  color: #909da8;
   border: none;
   margin: auto 2px;
-  box-shadow: inset 0px 0px 0 rgba(255, 255, 255, 0.3), 1px 1px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0px 0px 0 rgba(255, 255, 255, 0.3), 2px 2px 4px rgba(0, 0, 0, 0.3);
   font-weight: bold;
-  border-bottom: solid 1px #7290ac;
-  border-right: solid 1px #7290ac;
-  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.65);
   transition: 0.4s;
   cursor: pointer;
 }
 .PreContainer .PreMain .TableContent__flex .TableContent__count button:active {
-  -webkit-transform: translateY(1px);
-  transform: translateY(1px);
+  -webkit-transform: translateY(2px);
+  transform: translateY(2px);
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.35);
   border-bottom: none;
 }
@@ -552,6 +557,7 @@ input {
   width: 48px;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
 }
 .PreContainer .PreMain .TableContent__flex .TableContent__count .UnderLine {
   font-size: 32px;
@@ -561,8 +567,10 @@ input {
   width: 320px;
   font-size: 24px;
   text-align: center;
+  font-weight: bold;
 }
 .PreContainer .PreMain .TableContent__referee {
   width: 240px;
   text-align: center;
+  font-weight: bold;
 }

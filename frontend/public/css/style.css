@@ -56,6 +56,8 @@ input {
   display: flex;
   justify-content: space-between;
   position: fixed;
+  box-shadow: inset 0px 0px 0 rgba(255, 255, 255, 0.3), 2px 2px 4px rgba(0, 0, 0, 0.3);
+  z-index: 100;
 }
 .HeaderButton {
   margin-left: 16px;
@@ -488,11 +490,14 @@ input {
 .PreContainer .PreMain {
   padding: 24px 0;
 }
-.PreContainer .PreMain .Table td {
-  border: 1px solid #dfe7f1;
+.PreContainer .PreMain .Table thead th {
+  border: 1px solid #b7cadc;
 }
-.PreContainer .PreMain .Table th {
-  border: 1px solid #dfe7f1;
+.PreContainer .PreMain .Table tbody td {
+  border: 1px solid #fff;
+}
+.PreContainer .PreMain .Table tbody th {
+  border: 1px solid #fff;
 }
 .PreContainer .PreMain .TableTitle {
   background-color: #b7cadc;
@@ -500,14 +505,20 @@ input {
   text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.65);
   font-size: 14px;
 }
+.PreContainer .PreMain .TableTitle__point {
+  box-shadow: inset 0px 0px 0 rgba(255, 255, 255, 0.3), 1px 1px 0px rgba(0, 0, 0, 0.3);
+}
 .PreContainer .PreMain .TableTitle__number {
   width: 80px;
+  box-shadow: inset 0px 0px 0 rgba(255, 255, 255, 0.3), 1px 1px 0px rgba(0, 0, 0, 0.3);
 }
 .PreContainer .PreMain .TableTitle__team {
   width: 320px;
+  box-shadow: inset 0px 0px 0 rgba(255, 255, 255, 0.3), 1px 1px 0px rgba(0, 0, 0, 0.3);
 }
 .PreContainer .PreMain .TableTitle__referee {
   width: 240px;
+  box-shadow: inset 0px 0px 0 rgba(255, 255, 255, 0.3), 1px 1px 0px rgba(0, 0, 0, 0.3);
 }
 .PreContainer .PreMain .TableContent {
   color: #6c7686;
@@ -516,12 +527,17 @@ input {
 }
 .PreContainer .PreMain .TableContent__number {
   width: 80px;
+  box-shadow: inset 0px 0px 0 rgba(255, 255, 255, 0.3), 1px 1px 2px rgba(50, 50, 50, 0.3);
 }
 .PreContainer .PreMain .TableContent__teamA {
   width: 320px;
   font-size: 24px;
   text-align: center;
   font-weight: bold;
+  box-shadow: inset 0px 0px 0 rgba(255, 255, 255, 0.3), 1px 1px 2px rgba(50, 50, 50, 0.3);
+}
+.PreContainer .PreMain .TableContent__point {
+  box-shadow: inset 0px 0px 0 rgba(255, 255, 255, 0.3), 1px 1px 2px rgba(50, 50, 50, 0.3);
 }
 .PreContainer .PreMain .TableContent__flex {
   width: 400px;
@@ -568,9 +584,11 @@ input {
   font-size: 24px;
   text-align: center;
   font-weight: bold;
+  box-shadow: inset 0px 0px 0 rgba(255, 255, 255, 0.3), 1px 1px 2px rgba(50, 50, 50, 0.3);
 }
 .PreContainer .PreMain .TableContent__referee {
   width: 240px;
   text-align: center;
   font-weight: bold;
+  box-shadow: inset 0px 0px 0 rgba(255, 255, 255, 0.3), 1px 1px 2px rgba(50, 50, 50, 0.3);
 }
